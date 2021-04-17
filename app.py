@@ -45,7 +45,8 @@ def register():
             with open(f"data/{account_number}.json", "w") as f:
                 json.dump(user_details, f, indent=4)
             print("Account created successfully.")
-            print("Log in using account number to view balance.")
+            print(f"Account number: {account_number}")
+            print("Log in using account number to perform operations on your account.")
 
 def login():
     account_number = input("Enter your account number: ")
@@ -68,4 +69,3 @@ def login():
     else:
         print("Invalid account number.")
         print("Please check the account number and try again.")
-
