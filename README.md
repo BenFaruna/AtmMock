@@ -6,3 +6,4 @@ Feel free to clone and open an account with us *wink* and test the app.
 I would also love your feedback.
 
 PS: This is a task for Zuri internship, happy to be part of it.
+
