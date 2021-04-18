@@ -4,6 +4,7 @@ def deposit(acct_no, amount):
     with open(f"data/{acct_no}.json", "r") as f:
         acct_details = json.load(f)
         acct_details['balance'] =  acct_details['balance'] + amount
+        print("Cash deposit succesful.")
     
     with open(f"data/{acct_no}.json", "w") as f:
         json.dump(acct_details, f, indent=4)
@@ -16,9 +17,11 @@ def withdraw(acct_no, amount):
             print("Insufficient Balance.")
         else:
             acct_details['balance'] =  acct_details['balance'] - amount
+            print("Take your cash!")
     
-    with open(f"data/{acct_no}.json", "w") as f:
-        json.dump(acct_details, f, indent=4)
+            with open(f"data/{acct_no}.json", "w") as f:
+                json.dump(acct_details, f, indent=4)
+
 
 def check_balance(acct_no):
     with open(f"data/{acct_no}.json", "r") as f:

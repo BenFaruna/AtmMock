@@ -62,9 +62,12 @@ def login():
                     logged_in = True
                     print("Account logged in successfully.")
                     print(f"Welcome {account_details['first name']} {account_details['last name']}")
+
+                    return(account_number, account_details['balance'])
                 else:
                     print("Incorrect password. Try again.")
                     password = getpass("Enter password: ")
+            
 
     else:
         print("Invalid account number.")
